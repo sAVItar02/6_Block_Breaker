@@ -137,6 +137,8 @@ MonoBehaviour:
   paddle1: {fileID: 0}
   xPush: 2
   yPush: 15
+  clickSound: {fileID: 8300000, guid: 79356aecbba46f84f90311d7a0c1207e, type: 3}
+  popSound: {fileID: 8300000, guid: 69eb1afaf2d78ae48b50c0c761c58bcc, type: 3}
 --- !u!82 &1248502287
 AudioSource:
   m_ObjectHideFlags: 0
@@ -147,7 +149,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 69eb1afaf2d78ae48b50c0c761c58bcc, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

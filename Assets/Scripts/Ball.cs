@@ -7,6 +7,8 @@ public class Ball : MonoBehaviour
     [SerializeField] Paddle paddle1 = null;
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 15f;
+    [SerializeField] AudioClip clickSound;
+    public AudioClip popSound;
     //public AudioClip popSound;
     //State
     bool hasStarted = false;
@@ -39,6 +41,14 @@ public class Ball : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(xPush, yPush);
             hasStarted = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(!collision.gameObject.GetComponent<Block>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(clickSound);
         }
     }
 }
