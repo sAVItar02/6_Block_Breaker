@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     [SerializeField] Paddle paddle1 = null;
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 15f;
+    //public AudioClip popSound;
     //State
     bool hasStarted = false;
     Vector2 paddleToBallVector;
