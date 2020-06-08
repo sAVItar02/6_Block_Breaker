@@ -6,9 +6,11 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     Level level;
+    GameStatus gameStatus;
 
     private void Start()
     {
+        gameStatus = FindObjectOfType<GameStatus>();
         level = FindObjectOfType<Level>();
         level.CountBreakableBlocks();
     }
@@ -16,6 +18,7 @@ public class Block : MonoBehaviour
     {
         PlayPopSound();
         level.ReduceBreakableBlocks();
+        gameStatus.AddScore();
         Destroy(gameObject);
     }
 
