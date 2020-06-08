@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2029664299868097034}
   - component: {fileID: 574662366090330408}
   m_Layer: 0
-  m_Name: Game Status
+  m_Name: Game Session
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,7 @@ PrefabInstance:
     - target: {fileID: 2386529837611012742, guid: 6a2de35a52d152041870ce6ecfebf852,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 1
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a2de35a52d152041870ce6ecfebf852, type: 3}

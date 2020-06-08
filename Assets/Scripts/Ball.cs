@@ -46,7 +46,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!collision.gameObject.GetComponent<Block>())
+        if(!collision.gameObject.GetComponent<Block>() || collision.gameObject.GetComponent<Block>().tag == "UnBreakable")
         {
             GetComponent<AudioSource>().PlayOneShot(clickSound);
         }
