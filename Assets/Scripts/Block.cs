@@ -1,18 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    Level level;
-    GameSession gameStatus;
-
+    //Config Params
     [SerializeField] ParticleSystem impactParticles;
+    [SerializeField] int maxHits = 1;
+    [SerializeField] Sprite[] damageLevels;
+
+
+    //cache reaference
+    Level level;
+
+    //state variables
+    [SerializeField] int timesHit = 0;
+
 
     private void Start()
     {
-        gameStatus = FindObjectOfType<GameSession>();
         if(tag == "Breakable")
         {
             CountBreakableBlocks();
@@ -29,15 +37,35 @@ public class Block : MonoBehaviour
     {
         if (tag == "Breakable")
         {
-            PlayPopSound();
-            InitiateDestroySequnce();
+            HandleHits();
         }
     }
 
-    private void InitiateDestroySequnce()
+    private void HandleHits()
+    {
+        timesHit++;
+        if(timesHit < maxHits)
+        {
+            PlayCrackSound();
+            showDamagedSprite();
+        }
+        else if (timesHit >= maxHits)
+        {
+            PlayPopSound();
+            InitiateDestroySequence();
+        }
+    }
+
+    private void showDamagedSprite()
+    {
+        int nextSprite = timesHit - 1; 
+        GetComponent<SpriteRenderer>().sprite = damageLevels[nextSprite];
+    }
+
+    private void InitiateDestroySequence()
     {
         level.ReduceBreakableBlocks();
-        gameStatus.AddScore();
+        FindObjectOfType<GameSession>().AddScore();
         PlayParticleEffects();
         Destroy(gameObject);
     }
@@ -47,6 +75,13 @@ public class Block : MonoBehaviour
         GameObject ball = GameObject.Find("Ball");
         Ball sound = ball.GetComponent<Ball>();
         sound.GetComponent<AudioSource>().PlayOneShot(sound.popSound);
+    }
+
+    private void PlayCrackSound()
+    {
+        GameObject ball = GameObject.Find("Ball");
+        Ball sound = ball.GetComponent<Ball>();
+        sound.GetComponent<AudioSource>().PlayOneShot(sound.crackSound);
     }
 
     private void PlayParticleEffects()

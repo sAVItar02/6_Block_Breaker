@@ -8,7 +8,10 @@ public class Ball : MonoBehaviour
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 15f;
     [SerializeField] AudioClip clickSound;
+    [SerializeField] AudioClip metalHit;
+
     public AudioClip popSound;
+    public AudioClip crackSound;
     //public AudioClip popSound;
     //State
     bool hasStarted = false;
@@ -46,9 +49,13 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!collision.gameObject.GetComponent<Block>() || collision.gameObject.GetComponent<Block>().tag == "UnBreakable")
+        if(!collision.gameObject.GetComponent<Block>())
         {
             GetComponent<AudioSource>().PlayOneShot(clickSound);
+        }
+        else if( collision.gameObject.GetComponent<Block>().tag == "UnBreakable")
+        {
+            GetComponent<AudioSource>().PlayOneShot(metalHit);
         }
     }
 }
