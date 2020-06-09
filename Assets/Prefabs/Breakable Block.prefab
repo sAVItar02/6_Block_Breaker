@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5877230090282618419}
   - component: {fileID: 3128550397907271166}
   m_Layer: 0
-  m_Name: Block
+  m_Name: Breakable Block
   m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,14 +100,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &3128550397907271166
 MonoBehaviour:
@@ -122,3 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactParticles: {fileID: 19800000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  damageLevels: []
+  timesHit: 0

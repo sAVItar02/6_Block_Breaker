@@ -8,7 +8,6 @@ public class Block : MonoBehaviour
 {
     //Config Params
     [SerializeField] ParticleSystem impactParticles;
-    [SerializeField] int maxHits = 1;
     [SerializeField] Sprite[] damageLevels;
 
 
@@ -44,6 +43,7 @@ public class Block : MonoBehaviour
     private void HandleHits()
     {
         timesHit++;
+        int maxHits = damageLevels.Length + 1;
         if(timesHit < maxHits)
         {
             PlayCrackSound();
@@ -59,7 +59,14 @@ public class Block : MonoBehaviour
     private void showDamagedSprite()
     {
         int nextSprite = timesHit - 1; 
-        GetComponent<SpriteRenderer>().sprite = damageLevels[nextSprite];
+        if(damageLevels[nextSprite] != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = damageLevels[nextSprite];
+        }
+        else
+        {
+            Debug.LogError("Sprites on Block " + gameObject.name + " missing");
+        }
     }
 
     private void InitiateDestroySequence()

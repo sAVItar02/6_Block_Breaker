@@ -119,9 +119,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0056564063, y: 0.01273036}
+  m_Offset: {x: 0.0048704147, y: 0.009742826}
   serializedVersion: 2
-  m_Radius: 0.20292902
+  m_Radius: 0.17000008
 --- !u!114 &3971597705051026388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
   yPush: 15
   clickSound: {fileID: 8300000, guid: 79356aecbba46f84f90311d7a0c1207e, type: 3}
   metalHit: {fileID: 8300000, guid: f0db5aa5dae1ae744ab637cc550116b4, type: 3}
+  randomFactor: 1
   popSound: {fileID: 8300000, guid: 69eb1afaf2d78ae48b50c0c761c58bcc, type: 3}
   crackSound: {fileID: 8300000, guid: cfec0ec4474f2be489f39bf12d36ca0f, type: 3}
 --- !u!82 &1248502287
