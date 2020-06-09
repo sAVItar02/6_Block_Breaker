@@ -6886,7 +6886,6 @@ Transform:
   - {fileID: 1607590570}
   - {fileID: 1753545008}
   - {fileID: 1093512494}
-  - {fileID: 1905659298}
   - {fileID: 111451791}
   - {fileID: 621779722}
   - {fileID: 2086490602}
@@ -6913,6 +6912,7 @@ Transform:
   - {fileID: 504403517}
   - {fileID: 77369790}
   - {fileID: 946204541}
+  - {fileID: 1905659298}
   - {fileID: 248853757}
   - {fileID: 719426062}
   - {fileID: 1047891019}
@@ -12722,6 +12722,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Play Space
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256357318546274248, guid: 401f89ef45bc0854c9966096cd663092,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256357318546274248, guid: 401f89ef45bc0854c9966096cd663092,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256357318546274248, guid: 401f89ef45bc0854c9966096cd663092,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.18758488
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 401f89ef45bc0854c9966096cd663092, type: 3}

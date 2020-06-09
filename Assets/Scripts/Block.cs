@@ -73,7 +73,7 @@ public class Block : MonoBehaviour
     {
         level.ReduceBreakableBlocks();
         FindObjectOfType<GameSession>().AddScore();
-        PlayParticleEffects();
+        //PlayParticleEffects();
         Destroy(gameObject);
     }
 

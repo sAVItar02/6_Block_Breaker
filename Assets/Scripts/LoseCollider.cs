@@ -5,13 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class LoseCollider : MonoBehaviour
 {
-    //[SerializeField] float levelLoadDelay = 2f;
+    Health health;
+    Ball ball;
+
+    private void Start()
+    {
+        ball = FindObjectOfType<Ball>();
+        health = FindObjectOfType<Health>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartDeathSequence();
+        if(health.currentHealth <= 1)
+        {
+            StartDeathSequence();
+        }
+        else
+        {
+            health.ReduceHealth();
+            ball.LockBallToPaddle();
+        }
     }
 
-    private static void StartDeathSequence()
+    private void StartDeathSequence()
     {
         Debug.Log("Death");
         SceneManager.LoadScene("Game Over");
