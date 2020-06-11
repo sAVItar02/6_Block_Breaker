@@ -21,8 +21,11 @@ public class LoseCollider : MonoBehaviour
         }
         else
         {
+            ball.GetComponent<AudioSource>().PlayOneShot(ball.dieSound);
+            ball.hasStarted = false;
             health.ReduceHealth();
             ball.LockBallToPaddle();
+            ball.LaunchOnMouseClick();
         }
     }
 

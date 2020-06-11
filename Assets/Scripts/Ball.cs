@@ -13,11 +13,12 @@ public class Ball : MonoBehaviour
 
     public AudioClip popSound;
     public AudioClip crackSound;
+    public AudioClip dieSound;
 
     Rigidbody2D myRigidBody;
 
     //State
-    bool hasStarted = false;
+    public bool hasStarted = false;
     Vector2 paddleToBallVector;
     // Start is called before the first frame update
     void Start()

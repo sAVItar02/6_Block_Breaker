@@ -142,6 +142,8 @@ MonoBehaviour:
   randomFactor: 0.2
   popSound: {fileID: 8300000, guid: 69eb1afaf2d78ae48b50c0c761c58bcc, type: 3}
   crackSound: {fileID: 8300000, guid: cfec0ec4474f2be489f39bf12d36ca0f, type: 3}
+  dieSound: {fileID: 8300000, guid: 9e03eb63ccb90c044853f1212b6f0799, type: 3}
+  hasStarted: 0
 --- !u!82 &1248502287
 AudioSource:
   m_ObjectHideFlags: 0

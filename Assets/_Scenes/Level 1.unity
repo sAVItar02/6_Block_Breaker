@@ -648,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 6363923742925862601, guid: 615ee92bfbb38d546bf7ef4e66ab19ec,
         type: 3}
       propertyPath: m_Name
-      value: Game Status
+      value: Game Session
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 615ee92bfbb38d546bf7ef4e66ab19ec, type: 3}
@@ -2433,5 +2433,6 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 721130224}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8256357319554664773, guid: 401f89ef45bc0854c9966096cd663092, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 401f89ef45bc0854c9966096cd663092, type: 3}
