@@ -24,7 +24,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-       paddleToBallVector = transform.position - paddle1.transform.position;
+        paddleToBallVector = transform.position - paddle1.transform.position;
     }
 
     // Update is called once per frame

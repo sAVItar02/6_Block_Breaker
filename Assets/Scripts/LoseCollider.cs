@@ -15,17 +15,20 @@ public class LoseCollider : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(health.currentHealth <= 1)
+        if(collision.CompareTag("Ball"))
         {
-            StartDeathSequence();
-        }
-        else
-        {
-            ball.GetComponent<AudioSource>().PlayOneShot(ball.dieSound);
-            ball.hasStarted = false;
-            health.ReduceHealth();
-            ball.LockBallToPaddle();
-            ball.LaunchOnMouseClick();
+            if (health.currentHealth <= 1)
+            {
+                StartDeathSequence();
+            }
+            else
+            {
+                ball.GetComponent<AudioSource>().PlayOneShot(ball.dieSound);
+                ball.hasStarted = false;
+                health.ReduceHealth();
+                ball.LockBallToPaddle();
+                ball.LaunchOnMouseClick();
+            }
         }
     }
 

@@ -9,7 +9,8 @@ public class Block : MonoBehaviour
     //Config Params
     [SerializeField] ParticleSystem impactParticles;
     [SerializeField] Sprite[] damageLevels;
-
+    [SerializeField]PowerUp powerUp;
+    public bool hasPowerUp = false;
 
     //cache reaference
     Level level;
@@ -37,7 +38,16 @@ public class Block : MonoBehaviour
         if (tag == "Breakable")
         {
             HandleHits();
+            if(hasPowerUp == true)
+            {
+                InstantiateRandomPowerUp();
+            }
         }
+    }
+
+    private void InstantiateRandomPowerUp()
+    {
+        Instantiate(powerUp, transform.position, Quaternion.identity);
     }
 
     private void HandleHits()
