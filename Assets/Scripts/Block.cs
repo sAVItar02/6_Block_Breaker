@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
 
 public class Block : MonoBehaviour
@@ -9,7 +10,7 @@ public class Block : MonoBehaviour
     //Config Params
     [SerializeField] ParticleSystem impactParticles;
     [SerializeField] Sprite[] damageLevels;
-    [SerializeField]PowerUp powerUp;
+    [SerializeField] PowerUp powerUp;
     public bool hasPowerUp = false;
 
     //cache reaference

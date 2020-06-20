@@ -543,8 +543,14 @@ PrefabInstance:
     - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: hasPowerUp
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
+        type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 124685958163171126, guid: 373d86fc0afcab74fa866291c46fcf2a,
+        type: 3}
     - target: {fileID: 5877230090282618418, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: m_Name
@@ -784,8 +790,14 @@ PrefabInstance:
     - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: hasPowerUp
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
+        type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 124685958163171126, guid: 373d86fc0afcab74fa866291c46fcf2a,
+        type: 3}
     - target: {fileID: 5877230090282618418, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: m_Name
@@ -1263,6 +1275,12 @@ PrefabInstance:
       propertyPath: hasPowerUp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
+        type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 124685958163171126, guid: 373d86fc0afcab74fa866291c46fcf2a,
+        type: 3}
     - target: {fileID: 5877230090282618418, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: m_Name
@@ -1371,8 +1389,14 @@ PrefabInstance:
     - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: hasPowerUp
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
+        type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 124685958163171126, guid: 373d86fc0afcab74fa866291c46fcf2a,
+        type: 3}
     - target: {fileID: 5877230090282618418, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: m_Name
@@ -1917,8 +1941,14 @@ PrefabInstance:
     - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: hasPowerUp
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3128550397907271166, guid: a22e91d1949da8245a397dc1abb05bf0,
+        type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 6051193201039855158, guid: ec1367d1b74ddf445b1660629a2cd0ee,
+        type: 3}
     - target: {fileID: 5877230090282618418, guid: a22e91d1949da8245a397dc1abb05bf0,
         type: 3}
       propertyPath: m_Name
