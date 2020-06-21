@@ -37,4 +37,10 @@ public class Health : MonoBehaviour
         currentHealth--;
         FillHearts();
     }
+
+    public void IncreaseHealth()
+    {
+        currentHealth++;
+        FillHearts();
+    }
 }

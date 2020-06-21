@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     public AudioClip crackSound;
     public AudioClip dieSound;
 
-    Rigidbody2D myRigidBody;
+    public Rigidbody2D myRigidBody;
 
     //State
     public bool hasStarted = false;
