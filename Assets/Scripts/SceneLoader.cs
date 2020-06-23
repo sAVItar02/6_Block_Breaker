@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour {
 
     public Animator transition;
     [SerializeField] float transitionTime = 1f;
+    
 
     public void LoadNextScene()
     {
