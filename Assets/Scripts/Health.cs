@@ -40,7 +40,14 @@ public class Health : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        currentHealth++;
-        FillHearts();
+        if(currentHealth < hearts.Length )
+        {
+            currentHealth++;
+            FillHearts();
+        }
+        else
+        {
+            currentHealth += 0;
+        }
     }
 }

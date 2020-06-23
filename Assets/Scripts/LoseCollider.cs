@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using EZCameraShake;
 
 public class LoseCollider : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class LoseCollider : MonoBehaviour
                 health.ReduceHealth();
                 ball.LockBallToPaddle();
                 ball.LaunchOnMouseClick();
+                CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 1f);
             }
         }
     }
