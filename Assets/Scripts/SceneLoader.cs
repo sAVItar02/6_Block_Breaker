@@ -17,7 +17,7 @@ public class SceneLoader : MonoBehaviour {
 
     IEnumerator LoadScene(int levelIndex)
     {
-        transition.SetTrigger("Start");
+        transition.SetTrigger("Start-Anim");
 
         yield return new WaitForSeconds(transitionTime);
 

@@ -16,8 +16,8 @@ public class GameSession : MonoBehaviour
 
     private void Awake()
     {
-        int gameStatusState = FindObjectsOfType<GameSession>().Length;
-        if(gameStatusState > 1)
+        int gameStatusState = FindObjectsOfType<Level>().Length;
+        if (gameStatusState > 1)
         {
             gameObject.SetActive(false);
             Destroy(gameObject);
