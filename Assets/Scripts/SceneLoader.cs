@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour {
 
-    public Animator transition;
-    [SerializeField] float transitionTime = 1f;
+    /*public Animator transition;
+    [SerializeField] float transitionTime = 1f;*/
+    [SerializeField] SceneFader fader;
     
 
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadScene(currentSceneIndex + 1));
+        fader.FadeTo(currentSceneIndex + 1);
     }
 
-    IEnumerator LoadScene(int levelIndex)
+    /*IEnumerator LoadScene(int levelIndex)
     {
         transition.SetTrigger("Start-Anim");
 
@@ -23,10 +24,10 @@ public class SceneLoader : MonoBehaviour {
 
         SceneManager.LoadScene(levelIndex);
     }
-
+*/
     public void LoadStartScene()
     {
-        SceneManager.LoadScene(0);
+        fader.FadeTo(0);
         FindObjectOfType<GameSession>().ResetGameSession();
     }
 

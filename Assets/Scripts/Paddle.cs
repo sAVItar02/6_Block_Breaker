@@ -5,6 +5,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     [SerializeField] float screenWidthInUnits = 16f;
+    private Vector3 touchPos;
     public float minX = 1f;
     public float maxX = 15f;
 
@@ -13,22 +14,25 @@ public class Paddle : MonoBehaviour
     GameSession gameSession;
     Ball ball;
 
-    // Start is called before the first frame update
     void Start()
     {
         ball = FindObjectOfType<Ball>();
         gameSession = FindObjectOfType<GameSession>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y);
-        paddlePos.x = Mathf.Clamp(GetXPos(), minX, maxX);
-        transform.position = paddlePos;
+        if(Input.touchCount > 0)
+        {
+            Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y);
+            Touch touch = Input.GetTouch(0);
+            touchPos = Camera.main.ScreenToWorldPoint(touch.position);
+            touchPos.z = 0;
+            paddlePos.x = Mathf.Clamp(touchPos.x, minX, maxX);
+            transform.position = paddlePos;
+        }
     }
 
-    private float GetXPos()
+    /*private float GetXPos()
     {
         if(gameSession.IsAutoPlayEnabled())
         {
@@ -38,5 +42,5 @@ public class Paddle : MonoBehaviour
         {
             return Input.mousePosition.x / Screen.width * screenWidthInUnits;
         }
-    }
+    }*/
 }
